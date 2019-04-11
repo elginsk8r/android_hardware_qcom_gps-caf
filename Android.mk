@@ -1,3 +1,5 @@
+ifneq ($(filter $(call my-dir),$(PRODUCT_SOONG_NAMESPACES)),)
+
 ifneq ($(BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE),)
 
 # Set required flags
@@ -45,3 +47,5 @@ LOCAL_PATH := $(call my-dir)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 endif # ifneq ($(BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE),)
+
+endif
